@@ -72,7 +72,7 @@ Este documento descreve o roteiro de testes realizados na API de gerenciamento d
 A base da API está rodando localmente no seguinte endereço:
 http://localhost:3000/tarefas
 
-## 1. POST /tarefas – Criar nova tarefa (Sucesso)
+### 1. POST /tarefas – Criar nova tarefa (Sucesso)
 
 Método: POST
 
@@ -122,94 +122,174 @@ Retorno do Json com a Tarefa criada
 ```
 
 Retornado:
+
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/1.png)
 
 sem alterações no método POST, continuando com o seu funcionamento correto
 
+### 2. POST /tarefas – Criar nova tarefa (Erro: campo obrigatório faltando)
 
-
-2. POST /tarefas – Criar nova tarefa (Erro: campo obrigatório faltando)
 Método: POST
+
 Endpoint: /tarefas
+
 Body JSON:
+
+```bash
 {
   "descricao": "Sem título"
 }
+```
+
 Esperado:
+
+```bash
 Erro 400 ou 500. Validação indicando campo obrigatório faltando.
+```
+
 Retornado:
 
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/2.png)
 
-Verificado em Teste(Por Lucas): O bloqueio para campo obrigatório está funcionando corretamente.
+Verificado em Teste: O bloqueio para campo obrigatório está funcionando corretamente.
+
+
 Teste após atualização do arquivo de rotas:
+
 Body JSON:
+
+```bash
 {
   "descricao": "Sem título"
 }
+```
+
 Esperado:
+
+```bash
 Erro 400 ou 500. Validação indicando campo obrigatório faltando.
+```
+
 Retornado:
 
-após a atualização dos arquivos, o bloqueio do método POST para campos obrigatórios continua funcionando corretamente
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/2.png)
+
+após a atualização dos arquivos, o bloqueio do método POST para campos obrigatórios continua funcionando corretamente.
 
 
-3. GET /tarefas – Listar tarefas (Sucesso)
+### 3. GET /tarefas – Listar tarefas (Sucesso)
+
 Método: GET
+
 Endpoint: /tarefas
+
 Esperado:
+
+```bash  
 Status 200. Retorna array com todas as tarefas.
+```
 Retornado:
 
-Verificado em teste(Por Lucas): A requisição GET apresenta erro, conforme imagem acima
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/3.png)
+
+Verificado em teste: A requisição GET apresenta erro, conforme imagem acima
+
 Teste após atualização do arquivo de rotas:
+
 Esperado:
+
+```bash  
 Status 200. Retorna array com todas as tarefas.
+```
+
 Retornado:
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/4.png)
 
 Após a atualização do arquivo de rotas, com a inclusão da rota para o método GET feita corretamente, o método segue respondendo como esperado
-4. PUT /tarefas/:id – Atualizar tarefa (Sucesso)
+
+### 4. PUT /tarefas/:id – Atualizar tarefa (Sucesso)
 Método: PUT
+
 Endpoint: /tarefas/{id}
+
 Body JSON:
+
+```bash  
 {
   "titulo": "Estudar Node.js (atualizado)",
   "status": "em andamento"
 }
+```
 Esperado:
+
+```bash  
 Status 200. Retorna JSON da tarefa atualizada.
+```
+
 Retornado:
 
-Verificado em Teste(Por Lucas): A requisição PUT apresenta erro, conforme imagem acima
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/5.png)
+
+Verificado em Teste: A requisição PUT apresenta erro, conforme imagem acima
+
 Teste após atualização do arquivo de rotas:
+
 Body JSON:
+
+```bash  
 {
   "titulo": "Estudar Node.js (atualizado)",
   "status": "em andamento"
 }
+
+```
+
 Esperado:
+
+```bash  
 Status 200. Retorna JSON da tarefa atualizada.
+```
+
 Retornado:
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/6.png)
 
 Após a atualização do arquivo de rotas, com a inclusão da rota para o método PUT feita corretamente, o método segue respondendo como esperado
 
-5. PUT /tarefas/:id – Atualizar tarefa (Erro: ID inválido)
+### 5. PUT /tarefas/:id – Atualizar tarefa (Erro: ID inválido)
 Método: PUT
+
 Endpoint: /tarefas/123
+
 Esperado:
+```bash  
 Erro 404 ou 500. ID inválido ou tarefa não encontrada.
 NÃO TESTADO, será testado quando a requisição primária estiver funcionando
+```
 Teste após atualização do arquivo de rotas:
+
 Body JSON:
+
+```bash  
 {
   "titulo": "testando ID inexistente",
   "status": "em andamento"
 }
+```
+
 Esperado:
+```bash  
 Erro 404 ou 500. ID inválido ou tarefa não encontrada.
+```
+
 Retornado:
 
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/7.png)
+
 após atualização do arquivo de rotas, com a inserção correta do método PUT no arquivo, o bloqueio para entrada de IDs inválidos está funcionando corretamente.
-6. DELETE /tarefas/:id – Deletar tarefa (Sucesso)
+
+### 6. DELETE /tarefas/:id – Deletar tarefa (Sucesso)
 Método: DELETE
 Endpoint: /tarefas/{id}
 Esperado:
@@ -224,7 +304,7 @@ Retornado:
 
 Após a atualização do arquivo de rotas, com a inclusão da rota para o método DELETE feita corretamente, o método segue respondendo como esperado
 
-7. DELETE /tarefas/:id – Deletar tarefa (Erro: ID não encontrado)
+### 7. DELETE /tarefas/:id – Deletar tarefa (Erro: ID não encontrado)
 Método: DELETE
 Endpoint: /tarefas/645a9ce9999f45c111111111
 Esperado:
@@ -238,7 +318,7 @@ Retornado:
 
 Após a atualização do arquivo de rotas, com a inclusão da rota para o método DELETE feita corretamente, o bloqueio para entrada de IDs inválidos está funcionando corretamente
 
-8. Testes Extras de Validação
+### 8. Testes Extras de Validação
 Teste
 Esperado
 Enviar status com valor inválido
@@ -457,17 +537,7 @@ Retornado:
 ## Membros do Grupo
 
 
-[![Eduardo](https://github.com/eduabjr.png?size=80)](https://github.com/eduabjr)
-
-[![Enzo](https://github.com/enzomartinsg.png?size=90)](https://github.com/enzomartinsg)
-
-[![Diogo](https://github.com/DiogoBastos-C.png?size=60)](https://github.com/DiogoBastos-C)
-
-[![Lucas](https://github.com/LucasCG-uscs.png?size=80)](https://github.com/LucasCG-uscs)
-
-[![Lucas](https://github.com/tiago-silva1500.png?size=80)](https://github.com/tiago-silva1500)
-
-
+[![Eduardo](https://github.com/eduabjr.png?size=80)](https://github.com/eduabjr) [![Enzo](https://github.com/enzomartinsg.png?size=80)](https://github.com/enzomartinsg) [![Diogo](https://github.com/DiogoBastos-C.png?size=80)](https://github.com/DiogoBastos-C) [![Lucas](https://github.com/LucasCG-uscs.png?size=80)](https://github.com/LucasCG-uscs) [![Tiago](https://github.com/tiagosilva-025.png?size=80)](https://github.com/tiagosilva-025)
 ## Suporte
 
 Para suporte, mande um email para fake@fake.com ou entre em nosso canal do Slack.
