@@ -28,17 +28,251 @@
 
 ## Sobre
 
-Neste projeto, o grupo desenvolveu uma API RESTful que permita realizar 
-operações básicas de CRUD (Create, Read, Update, Delete) em um banco de dados MongoDB. 
-A instancia do mongodb utilizada no projeto
-pode estar na máquina local ou no serviço em nuvem MondoDB Atlas.
+Neste projeto, o grupo desenvolveu uma API RESTful que permita realizar operações básicas de CRUD (Create, Read, Update, Delete) em um banco de dados MongoDB. A instancia do mongodb utilizada no projeto pode estar na máquina local ou no serviço em nuvem MondoDB Atlas.
+
+## Objetivos do projeto:
+
+### 1. Desenvolver uma API que implemente pelo menos quatro operações básicas em uma das collection que serão propostas pelo grupo: inclusão (Create), alteração (Update), consulta (Read) e exclusão (Delete) de dados.
+
+### 2. Definir e utilizar collections específicas para armazenar os dados no MongoDB.
+
+### 3. Escolher a linguagem de programação e framework de preferência da dupla para o desenvolvimento da API.
+
+### 4. Criar um repositório no GitHub para hospedar o código da API, incluindo um arquivo README.md detalhado.
+
+#### a. O repositório poderá ser público e o link do repositório deve ser informado na entrega do projeto por meio do google classroom;
+
+#### b. Para repositório privado o grupo deverá incluir o meu perfil do Github como colaborador e informar o link do repositório na entrega do projeto por meio do google classroom.
+
+### 5. Elaborar um README.md com as instruções necessárias para a execução da aplicação, incluindo a configuração do ambiente e a execução dos testes.
+
+### 6. Testar a API utilizando softwares como Postman, Insomnia ou extensões do VS Code como o Thunder Client.
+
+
+## Escolha do projeto:
+Nosso Grupo escolheu um Sistema de Gerenciamento de Tarefas para Equipes
+
+### Funcionalidades:
+
+Cadastro de usuários e projetos.
+
+Criação e atribuição de tarefas.
+
+Registro do histórico de status das tarefas.
+
+### Atividades que devem ser feitas com alta eficiência:
+
+Listagem das tarefas de um projeto com os dados do responsável na época da criação da tarefa.
+
+Consulta rápida do histórico de mudanças de status de uma tarefa.
+
+### Sugestões de Frameworks e Linguagens de Programação:
+Node.js com Express:
+
+Express é um framework web para Node.js que simplifica o desenvolvimento de aplicações
+web e APIs, proporcionando uma estrutura robusta para lidar com rotas, middlewares e
+muito mais.
+
+Linguagem: JavaScript (ou TypeScript)
+Documentação: https://expressjs.com/
 ## Membros do Grupo
 
 
 [![Eduardo](https://github.com/eduabjr.png?size=80)](https://github.com/eduabjr) [![Enzo](https://github.com/enzomartinsg.png?size=80)](https://github.com/enzomartinsg) [![Diogo](https://github.com/DiogoBastos-C.png?size=80)](https://github.com/DiogoBastos-C) [![Lucas](https://github.com/LucasCG-uscs.png?size=80)](https://github.com/LucasCG-uscs) [![Tiago](https://github.com/tiagosilva-025.png?size=80)](https://github.com/tiagosilva-025)
-## Começando
+# Começando
+Ao início do desenvolvimento do projeto do mongoDB, foi realizada uma modelagem sobre o “Gerenciamento de tarefas”, no qual é o tema abordado durante a produção do trabalho.
 
-O método recomendado para instalar
+# Modelagem do Hackolade
+
+![](https://raw.githubusercontent.com/eduabjr/mongodb/main/Modelagem/Captura%20de%20tela%202025-04-16%20001404.png)
+
+Na imagem acima é possível analisar todo como o modelo foi planejado, assim como o relacionamento entre as collections e os campos required / obrigatórios (identificados por um * ao lado dos dados).
+
+Cada collection possui um identificador principal (_id), um campo de nome (ou titulo para tarefas) e uma descrição (apenas com exceção dos usuários), e outros campos diversos que variam de acordo com a collection.
+
+Nas collections usuários, equipes e projetos, é possível ver que há um subdocumento em cada uma, pois cada uma dessas collections em específico possui um dado e um relacionamento que depende de outra collection. 
+
+## Explicando mais a fundo:
+
+•	A collection usuários possui um subdocumento de equipes, no qual depende dos dados de uma equipe já existente, dessa maneira, quando um usuário for registrado, ele pode estar relacionado a uma equipe.
+
+•	O mesmo vale para a collection equipes, onde possui dois subdocumentos respectivamente de membros e projetos, que nesse caso uma equipe vai ter registrado os membros dela e os projetos a se realizar.
+
+•	E por fim há a collection projetos, que vem da collection de equipes como já mencionado, e com ela também possui um subdocumento de tarefas a se realizar dentro dos projetos.
+
+A modelagem hackolade também possui campos definidos como “required”, que no qual são campos que sempre devem ser preenchidos ao fazer um cadastro de uma entidade, por exemplo, o subdocumento de membros da collection equipes foi definido como required pois não existe a possibilidade de existir uma equipe sem membros.
+
+### É importante mencionar que, nem todos os campos foram definidos como required pois existe exceções em algumas ocasiões:
+
+•	O subdocumento equipes da collection usuários não é obrigatório, pois pode haver o cadastro de um usuário que no momento ele não possui uma equipe.
+
+•	Todos os campos descrições das collections não precisam necessariamente estar preenchidos pra registrar um indivíduo.
+
+•	O subdocumento projetos da collection equipes também não é obrigatório, uma equipe pode estar sem projetos no momento.
+
+•	Por fim o subdocumento tarefas da collection projetos não precisa sempre ser preenchido, já que um projeto pode não ter uma tarefa a ser feita em algum momento.
+
+Esses são os campos exceções, fora eles, todos os outros campos foram definidos como required e devem sempre ser preenchidos para serem registrados no banco de dados.
+
+Por fim disso tudo, na collection tarefas foi definido campos “Enum” em status e prioridade, para uma maior organização e simplicidade eles possuem possíveis valores já predefinidos quando for realizar um cadastro deles.
+
+### De forma mais detalhada:
+
+•	O campo status só pode haver 3 possíveis valores: pendente, em andamento e concluída, quando um usuário for registrar o status de uma tarefa, ele deverá escolher entre esses 3 status.
+
+•	O mesmo vale para o campo prioridade com 3 possíveis valores: baixa, média e alta, o usuário também deverá nesse mesmo campo escolher entre esses possíveis valores ao definir qual a prioridade de uma respectiva tarefa.
+
+## Códigos das Collections (schema mongoose):
+
+Um Schema do Mongoose define a estrutura dos documentos dentro de uma coleção MongoDB. É essencialmente um projeto que dita os tipos de dados que podem ser armazenados, seus valores padrão, regras de validação e outras propriedades.
+
+### Usuários
+```bash   
+var usuarios = new Schema({
+    _id: {
+        type: Schema.Types.ObjectId,
+        required: true
+    },
+    nome: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        required: true
+    },
+    senha: {
+        type: String,
+        required: true
+    },
+    cargo: {
+        type: String,
+        required: true
+    },
+    equipes: [
+        new Schema({
+            _id: {
+                type: Schema.Types.ObjectId
+            },
+            nome: {
+                type: String
+            }
+        })
+    ]
+});
+ ```
+### Equipes
+```bash   
+var equipes = new Schema({
+    _id: {
+        type: Schema.Types.ObjectId,
+        required: true
+    },
+    nome: {
+        type: String,
+        required: true
+    },
+    descricao: {
+        type: String
+    },
+    membros: [
+        new Schema({
+            _id: {
+                type: Schema.Types.ObjectId,
+                required: true
+            },
+            nome: {
+                type: String,
+                required: true
+            },
+            cargo: {
+                type: String,
+                required: true
+            }
+        })
+    ],
+    projetos: [
+        new Schema({
+            _id: {
+                type: Schema.Types.ObjectId
+            },
+            nome: {
+                type: String
+            }
+        })
+    ]
+});
+```
+
+### Projetos
+```bash    
+var projetos = new Schema({
+    _id: {
+        type: Schema.Types.ObjectId,
+        required: true
+    },
+    nome: {
+        type: String,
+        required: true
+    },
+    descricao: {
+        type: String
+    },
+    dataInicio: {
+        type: Date,
+        required: true
+    },
+    tarefas: [
+        new Schema({
+            _id: {
+                type: Schema.Types.ObjectId
+            },
+            titulo: {
+                type: String
+            },
+            status: {
+                type: String
+            }
+        })
+    ]
+});
+```
+
+### Tarefas
+```bash   
+var tarefas = new Schema({
+    _id: {
+        type: Schema.Types.ObjectId,
+        required: true
+    },
+    titulo: {
+        type: String,
+        required: true
+    },
+    descricao: {
+        type: String
+    },
+    status: {
+        type: String,
+        enum: [
+            "pendente",
+            "em andamento",
+            "concluida"
+        ],
+        required: true
+    },
+    "prioridade ": {
+        type: String,
+        enum: [
+            "baixa",
+            "media",
+            "alta"
+        ],
+        required: true
+    }
+});
+ ```
+
 ## Instrução de Instalação
 
 Instale my-project com npm
@@ -52,13 +286,6 @@ Instale my-project com npm
 
 
 ## Instrução de Uso    
-## Referência
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
-
 ## Roadmap
 
 - Melhorar o suporte de navegadores
@@ -689,11 +916,6 @@ Retornado:
 ?????????????
 
 
-## Screenshots
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
 ## Suporte
 
 Para suporte, mande um email para fake@fake.com ou entre em nosso canal do Slack.
@@ -702,6 +924,13 @@ Para suporte, mande um email para fake@fake.com ou entre em nosso canal do Slack
 ## Licença
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Referência
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
 
 ## Agradeciomento
