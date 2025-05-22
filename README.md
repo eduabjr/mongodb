@@ -4,7 +4,7 @@
 
 # Projeto MongoDB API RESTful
 
-[![Licença](https://img.shields.io/badge/Licença-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![Testes](https://img.shields.io/badge/Testes-Passando-brightgreen.svg)](https://github.com/seu-usuario/seu-repo/actions) [![Membros do Grupo](https://img.shields.io/badge/Membros%20do%20Grupo-5-blue.svg)](https://github.com/orgs/sua-organizacao/teams/seu-time) 
+[![Licença](https://img.shields.io/badge/Licença-MIT-green.svg)](https://github.com/eduabjr/mongodb/blob/main/LICENSE) [![Teste Local Host](https://img.shields.io/badge/Testes-Passando-brightgreen.svg)](https://readme.so/pt/editor#roteiro-de-testes-da-api-de-tarefas-em-localhost) [![Membros do Grupo](https://img.shields.io/badge/Membros%20do%20Grupo-5-blue.svg)](https://github.com/eduabjr/mongodb?tab=readme-ov-file#membros-do-grupo) 
 
 
 ## Súmario
@@ -915,7 +915,7 @@ Para suporte, mande um email para fake@fake.com ou entre em nosso canal do Slack
 
 ## Licença
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[MIT](https://github.com/eduabjr/mongodb/blob/main/LICENSE)
 
 
 ## Referência
