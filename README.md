@@ -32,21 +32,21 @@ Neste projeto, o grupo desenvolveu uma API RESTful que permita realizar operaç�
 
 ## Objetivos do projeto:
 
-### 1. Desenvolver uma API que implemente pelo menos quatro operações básicas em uma das collection que serão propostas pelo grupo: inclusão (Create), alteração (Update), consulta (Read) e exclusão (Delete) de dados.
+#### 1. Desenvolver uma API que implemente pelo menos quatro operações básicas em uma das collection que serão propostas pelo grupo: inclusão (Create), alteração (Update), consulta (Read) e exclusão (Delete) de dados.
 
-### 2. Definir e utilizar collections específicas para armazenar os dados no MongoDB.
+#### 2. Definir e utilizar collections específicas para armazenar os dados no MongoDB.
 
-### 3. Escolher a linguagem de programação e framework de preferência da dupla para o desenvolvimento da API.
+#### 3. Escolher a linguagem de programação e framework de preferência da dupla para o desenvolvimento da API.
 
-### 4. Criar um repositório no GitHub para hospedar o código da API, incluindo um arquivo README.md detalhado.
+#### 4. Criar um repositório no GitHub para hospedar o código da API, incluindo um arquivo README.md detalhado.
 
 #### a. O repositório poderá ser público e o link do repositório deve ser informado na entrega do projeto por meio do google classroom;
 
 #### b. Para repositório privado o grupo deverá incluir o meu perfil do Github como colaborador e informar o link do repositório na entrega do projeto por meio do google classroom.
 
-### 5. Elaborar um README.md com as instruções necessárias para a execução da aplicação, incluindo a configuração do ambiente e a execução dos testes.
+#### 5. Elaborar um README.md com as instruções necessárias para a execução da aplicação, incluindo a configuração do ambiente e a execução dos testes.
 
-### 6. Testar a API utilizando softwares como Postman, Insomnia ou extensões do VS Code como o Thunder Client.
+#### 6. Testar a API utilizando softwares como Postman, Insomnia ou extensões do VS Code como o Thunder Client.
 
 
 ## Escolha do projeto:
@@ -66,7 +66,7 @@ Listagem das tarefas de um projeto com os dados do responsável na época da cri
 
 Consulta rápida do histórico de mudanças de status de uma tarefa.
 
-### Sugestões de Frameworks e Linguagens de Programação:
+### Frameworks e Linguagens de Programação:
 Node.js com Express:
 
 Express é um framework web para Node.js que simplifica o desenvolvimento de aplicações
@@ -126,7 +126,7 @@ Por fim disso tudo, na collection tarefas foi definido campos “Enum” em stat
 
 Um Schema do Mongoose define a estrutura dos documentos dentro de uma coleção MongoDB. É essencialmente um projeto que dita os tipos de dados que podem ser armazenados, seus valores padrão, regras de validação e outras propriedades. Com isso, foi produzido 4 schemas com base no que foi estruturado na modelagem, sendo as 4 tabelas: Usuários, Equipes, Projetos e Tarefas. É importante mencionar também que a partir desses schemas foi planejado o back end do banco MongoDB
 
-### Usuários
+### Colleciotn Usuários
 ```bash   
 var usuarios = new Schema({
     _id: {
@@ -161,7 +161,7 @@ var usuarios = new Schema({
     ]
 });
  ```
-### Equipes
+### Colleciotn Equipes
 ```bash   
 var equipes = new Schema({
     _id: {
@@ -204,7 +204,7 @@ var equipes = new Schema({
 });
 ```
 
-### Projetos
+### Colleciotn Projetos
 ```bash    
 var projetos = new Schema({
     _id: {
@@ -238,7 +238,7 @@ var projetos = new Schema({
 });
 ```
 
-### Tarefas
+### Colleciotn Tarefas
 ```bash   
 var tarefas = new Schema({
     _id: {
