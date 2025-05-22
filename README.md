@@ -22,6 +22,52 @@
 
 Neste projeto, o grupo desenvolveu uma API RESTful que permita realizar operações básicas de CRUD (Create, Read, Update, Delete) em um banco de dados MongoDB. A instancia do mongodb utilizada no projeto pode estar na máquina local ou no serviço em nuvem MondoDB Atlas.
 
+### Conhendo as Tecnologias empregadas
+
+#### MongoDB
+
+O MongoDB é um banco de dados NoSQL (Not only SQL) orientado a documentos, o que significa que ele não armazena dados em tabelas com linhas e colunas fixas como os bancos de dados relacionais (SQL). Em vez disso, ele armazena dados em documentos flexíveis no formato BSON (Binary JSON), que é uma representação binária do JSON.
+
+##### Principais Características:
+1. Flexibilidade do Esquema: Você não precisa definir um esquema rígido antes de começar a armazenar dados. Isso é excelente para o desenvolvimento ágil e para lidar com dados semiestruturados ou em constante evolução.
+
+2. Escalabilidade: Projetado para escalar horizontalmente, o que o torna ideal para aplicações com grandes volumes de dados e altos requisitos de tráfego.
+Desempenho: Frequentemente oferece alto desempenho para operações de leitura e gravação, especialmente com o uso de índices.
+
+3. Orientado a Documentos: A modelagem de dados com documentos geralmente se alinha melhor com a forma como os objetos são representados em linguagens de programação, simplificando o desenvolvimento de aplicações.
+
+4. Suporte a Agregação: Possui um poderoso framework de agregação que permite processar dados dentro do banco de dados, realizando operações como agrupamento, filtragem e transformação.
+
+#### MongoDB Atlas
+
+O Que é e como funciona o MongoDB Atlas?
+
+O MongoDB Atlas é um serviço de banco de dados em nuvem totalmente gerenciado, oferecido pela MongoDB Inc. Ele permite que desenvolvedores e empresas implantem, operem e escalem bancos de dados MongoDB sem precisar gerenciar servidores físicos ou configurações complexas.
+
+##### Principais Características:
+1. Banco de Dados como Serviço (DBaaS)
+Sem infraestrutura local: Não é necessário instalar o MongoDB manualmente em servidores próprios.
+
+Gerenciamento automatizado: Atlas cuida de backups, atualizações, segurança e escalabilidade.
+
+2. Multiplataforma e Escalável
+Nuvem pública: Disponível na AWS, Google Cloud e Microsoft Azure.
+
+Escalabilidade horizontal: Aumente a capacidade do banco de dados sob demanda.
+
+Alta Disponibilidade e Tolerância a Falhas
+Replicação automática: Dados são copiados em múltiplos nós (replica sets) para evitar perdas.
+
+Failover automático: Se um servidor falhar, outro assume instantaneamente.
+
+4. Segurança Avançada
+Criptografia em repouso e em trânsito.
+
+Controle de acesso: Autenticação por usuário/senha, integração com LDAP e IAM da AWS.
+
+Firewall e VPC Peering: Restringe acesso apenas a IPs autorizados.
+
+
 ## Objetivos do projeto:
 
 #### 1. Desenvolver uma API que implemente pelo menos quatro operações básicas em uma das collection que serão propostas pelo grupo: inclusão (Create), alteração (Update), consulta (Read) e exclusão (Delete) de dados.
@@ -70,9 +116,62 @@ Documentação: https://expressjs.com/
 ## Membros do Grupo
 
 
-[![Eduardo](https://github.com/eduabjr.png?size=80)](https://github.com/eduabjr) [![Enzo](https://github.com/enzomartinsg.png?size=80)](https://github.com/enzomartinsg) [![Diogo](https://github.com/DiogoBastos-C.png?size=80)](https://github.com/DiogoBastos-C) [![Lucas](https://github.com/LucasCG-uscs.png?size=80)](https://github.com/LucasCG-uscs) [![Tiago](https://github.com/tiagosilva-025.png?size=80)](https://github.com/tiagosilva-025)
+[![Eduardo](https://github.com/eduabjr.png?size=80)](https://github.com/eduabjr) [![Enzo](https://github.com/enzomartinsg.png?size=80)](https://github.com/enzomartinsg) [![Diogo](https://github.com/DiogoBastos-C.png?size=80)](https://github.com/DiogoBastos-C) [![Lucas](https://github.com/LucasCG-uscs.png?size=80)](https://github.com/LucasCG-uscs) [![Tiago](https://github.com/tiagosilva-025.png?size=80)](https://github.com/tiagosilva-025) [![Carlos](https://github.com/Edu1910-sl.png?size=80)](https://github.com/Edu1910-sl)
 # Começando
-Ao início do desenvolvimento do projeto do mongoDB, foi realizada uma modelagem sobre o “Gerenciamento de tarefas”, no qual é o tema abordado durante a produção do trabalho.
+Ao início do desenvolvimento do projeto do mongoDB, foram dividas algumas tarefas para que fossem mais facilmete administradas pelos membos do grupo:
+
+### 1º Modelagem do Hackolade e Estrutura do Banco (MongoDB)
+
+- Definir collections e campos conforme o tema escolhido.
+- Criar estrutura dos documentos MongoDB.
+
+- Relacionamentos entre documentos (se houver necessidade de embedded documents ou referências).
+
+- Criar scripts ou documentação para popular o banco com dados de teste.
+
+### 2º Back-end e Lógica da API (CRUD)
+
+- Desenvolver as rotas da API (Create, Read, Update, Delete).
+
+- Implementar middleware e tratamento de erros.
+
+- Garantir integração com o banco MongoDB.
+
+- Definir estrutura do projeto de acordo com o framework escolhido.
+
+
+### 3º Testes com Postman/Insomnia/Thunder Client
+
+- Criar collection de testes no Postman ou outra ferramenta.
+
+- Documentar exemplos de requisições com diferentes cenários.
+
+- Validar as rotas e as respostas da API.
+
+- Contribuir com testes de falhas e casos de borda.
+
+### 4º Documentação (README.md e Manual de Uso)
+
+Neste passo é documentado tudo o que aconteceu nos passsos anteriores e informações como: 
+
+- Descrição do projeto.
+
+- Passos de instalação/configuração.
+
+- Exemplos de requisições.
+
+- Ferramentas utilizadas.
+
+### 5º DevOps e Deploy Local/Nuvem (opcional)
+
+- Configurar MongoDB local ou Atlas (nuvem).
+
+- Criar .env com variáveis sensíveis.
+
+- Automatizar execução (ex: scripts npm, docker, etc.).
+
+- Verificar deploy ou execução local eficiente para todos do grupo.
+
 
 # Modelagem do Hackolade
 
@@ -265,6 +364,8 @@ var tarefas = new Schema({
 });
  ```
 
+## Pré - Requisitos
+
 ## Instrução de Instalação
 
 Instale my-project com npm
@@ -273,9 +374,6 @@ Instale my-project com npm
   npm install my-project
   cd my-project
 ```
-
-### Pré - Requisitos
-
 
 ## Instrução de Uso    
 ```bash
