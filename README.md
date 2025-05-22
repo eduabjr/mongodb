@@ -4,7 +4,7 @@
 
 # Projeto MongoDB API RESTful
 
-[![Licença](https://img.shields.io/badge/Licença-MIT-green.svg)](https://github.com/eduabjr/mongodb/blob/main/LICENSE) [![Teste Local Host](https://img.shields.io/badge/Testes-Passando-brightgreen.svg)](https://readme.so/pt/editor#roteiro-de-testes-da-api-de-tarefas-em-localhost) [![Membros do Grupo](https://img.shields.io/badge/Membros%20do%20Grupo-5-blue.svg)](https://github.com/eduabjr/mongodb?tab=readme-ov-file#membros-do-grupo) 
+[![Licença](https://img.shields.io/badge/Licença-MIT-green.svg)](https://github.com/eduabjr/mongodb/blob/main/LICENSE) [![Teste Local Host](https://img.shields.io/badge/Testes-Localhost-brightgreen.svg)](https://github.com/eduabjr/mongodb/blob/main/README.md#roteiro-de-testes-da-api-de-tarefas-em-localhost) [![Teste cloud](https://img.shields.io/badge/Testes-cloud-brightred.svg)](https://github.com/eduabjr/mongodb/blob/main/README.md#roteiro-de-testes-da-api-de-tarefas-em-cloud) [![Membros do Grupo](https://img.shields.io/badge/Membros%20do%20Grupo-5-blue.svg)](https://github.com/eduabjr/mongodb?tab=readme-ov-file#membros-do-grupo) 
 
 
 ## Súmario
@@ -278,13 +278,6 @@ Instale my-project com npm
 
 
 ## Instrução de Uso    
-## Roadmap
-
-- Melhorar o suporte de navegadores
-
-- Adicionar mais integrações
-
-
 ```bash
 
 ```
@@ -906,11 +899,6 @@ Erro 400 - Parsing inválido
 Retornado:
 
 ?????????????
-
-
-## Suporte
-
-Para suporte, mande um email para fake@fake.com ou entre em nosso canal do Slack.
 
 
 ## Licença
