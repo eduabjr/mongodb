@@ -2,7 +2,7 @@
 ![Logo](https://upload.wikimedia.org/wikipedia/commons/0/00/Mongodb.png)
 
 
-# MongoDB
+# Projeto MongoDB API RESTful
 
 [![Licença](https://img.shields.io/badge/Licença-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
@@ -31,6 +31,15 @@
 
 
 ## Sobre
+
+Neste projeto, o grupo desenvolveu uma API RESTful que permita realizar 
+operações básicas de CRUD (Create, Read, Update, Delete) em um banco de dados MongoDB. 
+A instancia do mongodb utilizada no projeto
+pode estar na máquina local ou no serviço em nuvem MondoDB Atlas.
+## Membros do Grupo
+
+
+[![Eduardo](https://github.com/eduabjr.png?size=80)](https://github.com/eduabjr) [![Enzo](https://github.com/enzomartinsg.png?size=80)](https://github.com/enzomartinsg) [![Diogo](https://github.com/DiogoBastos-C.png?size=80)](https://github.com/DiogoBastos-C) [![Lucas](https://github.com/LucasCG-uscs.png?size=80)](https://github.com/LucasCG-uscs) [![Tiago](https://github.com/tiagosilva-025.png?size=80)](https://github.com/tiagosilva-025)
 ## Começando
 
 O método recomendado para instalar
@@ -65,7 +74,7 @@ Instale my-project com npm
 
 ```
 
-## Rodando os testes
+## Rodando os testes (localhost)
 
 Este documento descreve o roteiro de testes realizados na API de gerenciamento de tarefas construída com Node.js, Express e MongoDB. Os testes foram realizados utilizando ferramentas como Thunder Client.
 
@@ -104,6 +113,8 @@ Retornado:
   "__v": 0
 }
 ```
+
+Verificado em teste: Collection criada com sucesso no banco de dados com os atributos do Json acima.
 
 Teste após atualização do arquivo de rotas:
 
@@ -291,224 +302,368 @@ após atualização do arquivo de rotas, com a inserção correta do método PUT
 
 ### 6. DELETE /tarefas/:id – Deletar tarefa (Sucesso)
 Método: DELETE
+
 Endpoint: /tarefas/{id}
+
 Esperado:
+
+```bash   
 Status 200. Mensagem de sucesso ao deletar tarefa.
+ ```
+
 Retornado:
 
-Verificado em Teste(Por Lucas): A requisição DELETE apresenta erro, conforme imagem acima
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/8.png)
+
+
+Verificado em Teste: A requisição DELETE apresenta erro, conforme imagem acima
+
+
 Teste após atualização do arquivo de rotas:
+
 Esperado:
+```bash   
 Status 200. Mensagem de sucesso ao deletar tarefa.
+ ```
+
 Retornado:
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/9.png)
 
 Após a atualização do arquivo de rotas, com a inclusão da rota para o método DELETE feita corretamente, o método segue respondendo como esperado
 
 ### 7. DELETE /tarefas/:id – Deletar tarefa (Erro: ID não encontrado)
 Método: DELETE
+
 Endpoint: /tarefas/645a9ce9999f45c111111111
+
 Esperado:
+
+```bash   
 Erro 404. Mensagem de tarefa não encontrada.
-	NÃO TESTADO, será testado quando a requisição primária estiver funcionando
+NÃO TESTADO, será testado quando a requisição primária estiver funcionando
+```
 Teste após atualização do arquivo de rotas:
+
 Endpoint: /tarefas/645a9ce9999f45c111111111
+
 Esperado:
+
+```bash   
 Erro 404. Mensagem de tarefa não encontrada.
+```
+
 Retornado:
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/10.png)
 
 Após a atualização do arquivo de rotas, com a inclusão da rota para o método DELETE feita corretamente, o bloqueio para entrada de IDs inválidos está funcionando corretamente
 
-### 8. Testes Extras de Validação
-Teste
-Esperado
-Enviar status com valor inválido
-Erro 400 ou 500 - Validação do status
-Enviar campo extra no POST/PUT
-Ignorado ou salvo (dependendo da modelagem)
-Requisição sem Content-Type: application/json
-Erro 400 - Parsing inválido
+# 8. Testes Extras de Validação
 
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/11.png)
 
 Estes testes garantem que a API esteja funcionando corretamente em seus endpoints principais.
+
+
 Teste após atualização do arquivo de rotas:
-8.1 Enviar status com valor inválido
+
+## 8.1 Enviar status com valor inválido
 Método: POST
+
 Endpoint: /tarefas
+
 Body JSON:
+
+```bash    
 {
   "titulo": "Estudar Node.js",
   "descricao": "Aprofundar em Mongoose e APIs REST",
   "status": "Teste_de_status_invalido"
 }
-
+```
 
 Esperado:
+
+```bash   
 Erro 400 ou 500 - Validação do status
+ ```
+
 Retornado:
 
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/12.png)
+
+
 O bloqueio para valor inválido no atributo está funcionando corretamente
-8.2 Enviar campo extra no POST/PUT
-8.2.1
+
+## 8.2 Enviar campo extra no POST/PUT
+
+### 8.2.1
 Método: POST
+
 Endpoint: /tarefas
+
 Body JSON:
+```bash   
 {
   "titulo": "Estudar Node.js",
   "descricao": "Aprofundar em Mongoose e APIs REST",
   "status": "pendente",
   "campo_extra":"Teste"
 }
+ ```
+
 Esperado:
+
+```bash   
 Ignorado ou salvo (dependendo da modelagem)
+ ```
+
 Retornado:
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/14.png)
 
 A aplicação ignora campos extras inseridos no Json e insere no banco de dados apenas campos reconhecidos .
 
-8.2.2
+### 8.2.2
 Método: PUT
+
 Endpoint: /tarefas/{id}
-Body JSON:
+
+```bash  
 {
   "titulo": "Estudar Node.js(teste 8.2.2)",
   "descricao": "Aprofundar em Mongoose e APIs REST",
   "status": "pendente",
   "campo_extra":"Teste"
 }
+ ```
+
 
 Esperado:
+
+```bash    
 Ignorado ou salvo (dependendo da modelagem)
+```
+
 Retornado:
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/15.png)
+
 
 A aplicação ignora campos extras inseridos no Json e insere no banco de dados apenas campos reconhecidos .
 
-8.3 Requisição sem Content-Type: application/json
+### 8.3 Requisição sem Content-Type: application/json
 Método: POST
+
 Endpoint: /tarefas
+
 Esperado:
+
+```bash    
 Erro 400 - Parsing inválido
+```
+
 Retornado:
 
 Ao enviar uma requisição POST sem conteúdo Json o retorno da aplicação é um erro 500 indicando a falta de um campo obrigatório. Esse erro não era o comportamento esperado, mas impede requisições POST sem conteúdo Json
 
-Roteiro de Testes da API de Tarefas (Testes em cloud)
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/16.png)
+
+--------------------------------------------------------------------------------
+## Roteiro de Testes da API de Tarefas (Testes em cloud)
+
 Roteiro de testes realizados na API de gerenciamento de tarefas construída com Node.js, Express e MongoDB. Os testes foram realizados utilizando ferramentas como Thunder Client
 
 A base da API está rodando localmente no seguinte endereço:
 ???
-1. POST /tarefas – Criar nova tarefa
+### 1. POST /tarefas – Criar nova tarefa
 Método: POST
+
 Endpoint: /tarefas
+
 Body JSON:
+```bash 
 {
   "titulo": "Estudar Node.js",
   "descricao": "Aprofundar em Mongoose e APIs REST",
   "status": "pendente"
 }
+   ```
+
 Esperado:
+```bash  
 Retorno do Json com a Tarefa criada
+```
+
 Retornado:
 
-2. POST /tarefas – Criar nova tarefa (Erro: campo obrigatório faltando)
+?????????????
+
+
+### 2. POST /tarefas – Criar nova tarefa (Erro: campo obrigatório faltando)
 Método: POST
+
 Endpoint: /tarefas
+
 Body JSON:
+```bash   
 {
   "descricao": "Sem título"
 }
+ ```
 Esperado:
+```bash  
 Erro 400 ou 500. Validação indicando campo obrigatório faltando.
+ ```
 Retornado:
 
-3. GET /tarefas – Listar tarefas (Sucesso)
+?????????????
+
+### 3. GET /tarefas – Listar tarefas (Sucesso)
 Método: GET
+
 Endpoint: /tarefas
+
 Esperado:
+```bash    
 Status 200. Retorna array com todas as tarefas.
+```
+
 Retornado:
 
-4. PUT /tarefas/:id – Atualizar tarefa (Sucesso)
+?????????????
+
+### 4. PUT /tarefas/:id – Atualizar tarefa (Sucesso)
 Método: PUT
+
 Endpoint: /tarefas/{id}
+
 Body JSON:
+```bash   
 {
   "titulo": "Estudar Node.js (atualizado)",
   "status": "em andamento"
 }
-Esperado:
-Status 200. Retorna JSON da tarefa atualizada.
-Retornado:
+ ```
 
-5. PUT /tarefas/:id – Atualizar tarefa (Erro: ID inválido)
+Esperado:
+```bash    
+Status 200. Retorna JSON da tarefa atualizada.
+```
+
+Retornado:
+?????????????
+
+### 5. PUT /tarefas/:id – Atualizar tarefa (Erro: ID inválido)
 Método: PUT
+
 Endpoint: /tarefas/123
+
 Body JSON:
+```bash
 {
   "titulo": "testando ID inexistente",
   "status": "em andamento"
 }
+
+ ```
+
 Esperado:
+```bash    
 Erro 404 ou 500. ID inválido ou tarefa não encontrada.
+```
 Retornado:
 
-6. DELETE /tarefas/:id – Deletar tarefa (Sucesso)
+?????????????
+
+### 6. DELETE /tarefas/:id – Deletar tarefa (Sucesso)
 Método: DELETE
+
 Endpoint: /tarefas/{id}
-Esperado:
-Status 200. Mensagem de sucesso ao deletar tarefa.
-Retornado:
 
-7. DELETE /tarefas/:id – Deletar tarefa (Erro: ID não encontrado)
+Esperado:
+```bash   
+Status 200. Mensagem de sucesso ao deletar tarefa. 
+```
+Retornado:
+?????????????
+
+### 7. DELETE /tarefas/:id – Deletar tarefa (Erro: ID não encontrado)
 Método: DELETE
+
 Endpoint: /tarefas/645a9ce9999f45c111111111
+
 Esperado:
+```bash    
 Erro 404. Mensagem de tarefa não encontrada.
+```
+
+
 Retornado:
+?????????????
 
-8. Testes Extras de Validação
-Teste
-Esperado
-Enviar status com valor inválido
-Erro 400 ou 500 - Validação do status
-Enviar campo extra no POST/PUT
-Ignorado ou salvo (dependendo da modelagem)
-Requisição sem Content-Type: application/json
-Erro 400 - Parsing inválido
+### 8. Testes Extras de Validação
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/17.png)
 
 
-8.1 Enviar status com valor inválido
+### 8.1 Enviar status com valor inválido
 Método: POST
+
 Endpoint: /tarefas
+
 Body JSON:
+```bash   
 {
   "titulo": "Estudar Node.js",
   "descricao": "Aprofundar em Mongoose e APIs REST",
   "status": "Teste_de_status_invalido"
 }
 
-
+ ```
 Esperado:
+
+```bash    
 Erro 400 ou 500 - Validação do status
+ ```
+
 Retornado:
 
-8.2 Enviar campo extra no POST/PUT
-8.2.1
+?????????????
+
+## 8.2 Enviar campo extra no POST/PUT
+### 8.2.1
 Método: POST
+
 Endpoint: /tarefas
+
 Body JSON:
+```bash    
 {
   "titulo": "Estudar Node.js",
   "descricao": "Aprofundar em Mongoose e APIs REST",
   "status": "pendente",
   "campo_extra":"Teste"
 }
+```
 Esperado:
+```bash    
 Ignorado ou salvo (dependendo da modelagem)
+```
+
 Retornado:
 
-8.2.2
+?????????????
+
+
+### 8.2.2
 Método: PUT
+
 Endpoint: /tarefas/{id}
+
 Body JSON:
+```bash    
 {
   "titulo": "Estudar Node.js(teste 8.2.2)",
   "descricao": "Aprofundar em Mongoose e APIs REST",
@@ -516,17 +671,26 @@ Body JSON:
   "campo_extra":"Teste"
 }
 
+```
 Esperado:
+```bash   
 Ignorado ou salvo (dependendo da modelagem)
+ ```
 Retornado:
 
-8.3 Requisição sem Content-Type: application/json
+?????????????
+### 8.3 Requisição sem Content-Type: application/json
 Método: POST
+
 Endpoint: /tarefas
+
 Esperado:
+```bash    
 Erro 400 - Parsing inválido
+```
 Retornado:
 
+?????????????
 
 
 ## Screenshots
@@ -534,10 +698,6 @@ Retornado:
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
-## Membros do Grupo
-
-
-[![Eduardo](https://github.com/eduabjr.png?size=80)](https://github.com/eduabjr) [![Enzo](https://github.com/enzomartinsg.png?size=80)](https://github.com/enzomartinsg) [![Diogo](https://github.com/DiogoBastos-C.png?size=80)](https://github.com/DiogoBastos-C) [![Lucas](https://github.com/LucasCG-uscs.png?size=80)](https://github.com/LucasCG-uscs) [![Tiago](https://github.com/tiagosilva-025.png?size=80)](https://github.com/tiagosilva-025)
 ## Suporte
 
 Para suporte, mande um email para fake@fake.com ou entre em nosso canal do Slack.
