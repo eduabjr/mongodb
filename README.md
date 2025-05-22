@@ -126,7 +126,7 @@ Por fim disso tudo, na collection tarefas foi definido campos “Enum” em stat
 
 Um Schema do Mongoose define a estrutura dos documentos dentro de uma coleção MongoDB. É essencialmente um projeto que dita os tipos de dados que podem ser armazenados, seus valores padrão, regras de validação e outras propriedades. Com isso, foi produzido 4 schemas com base no que foi estruturado na modelagem, sendo as 4 tabelas: Usuários, Equipes, Projetos e Tarefas. É importante mencionar também que a partir desses schemas foi planejado o back end do banco MongoDB
 
-### Colleciotn Usuários
+### Collection Usuários
 ```bash   
 var usuarios = new Schema({
     _id: {
@@ -161,7 +161,7 @@ var usuarios = new Schema({
     ]
 });
  ```
-### Colleciotn Equipes
+### Collection Equipes
 ```bash   
 var equipes = new Schema({
     _id: {
@@ -204,7 +204,7 @@ var equipes = new Schema({
 });
 ```
 
-### Colleciotn Projetos
+### Collection Projetos
 ```bash    
 var projetos = new Schema({
     _id: {
@@ -238,7 +238,7 @@ var projetos = new Schema({
 });
 ```
 
-### Colleciotn Tarefas
+### Collection Tarefas
 ```bash   
 var tarefas = new Schema({
     _id: {
