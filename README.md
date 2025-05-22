@@ -4,11 +4,7 @@
 
 # Projeto MongoDB API RESTful
 
-[![Licença](https://img.shields.io/badge/Licença-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-
-[![Testes](https://img.shields.io/badge/Testes-Passando-brightgreen.svg)](https://github.com/seu-usuario/seu-repo/actions) 
-
-[![Membros do Grupo](https://img.shields.io/badge/Membros%20do%20Grupo-5-blue.svg)](https://github.com/orgs/sua-organizacao/teams/seu-time) 
+[![Licença](https://img.shields.io/badge/Licença-MIT-green.svg)](https://choosealicense.com/licenses/mit/) [![Testes](https://img.shields.io/badge/Testes-Passando-brightgreen.svg)](https://github.com/seu-usuario/seu-repo/actions) [![Membros do Grupo](https://img.shields.io/badge/Membros%20do%20Grupo-5-blue.svg)](https://github.com/orgs/sua-organizacao/teams/seu-time) 
 
 
 ## Súmario
