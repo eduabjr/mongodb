@@ -9,20 +9,13 @@
 
 ## Súmario
 
-    Sobre
-        Construído com
-    Começando
-        Pré-requisitos
-        Uso
-            Modelo de cortador de biscoitos
-            Configuração manual
-            Referência de variáveis
-    Roteiro
-    Contribuindo
-    Apoiar
-    Licença
-    Agradecimentos
-
+* [Sobre](#sobre)
+* [Começando](#começando)
+* [Roteiro](#roteiro)
+* [Contribuindo](#contribuindo)
+* [Apoiar](#apoiar)
+* [Licença](#licença)
+* [Agradecimentos](#agradecimentos)
 
 
 
@@ -297,7 +290,7 @@ Instale my-project com npm
 
 ```
 
-## Rodando os testes (localhost)
+## Roteiro de Testes da API de Tarefas em localhost
 
 Este documento descreve o roteiro de testes realizados na API de gerenciamento de tarefas construída com Node.js, Express e MongoDB. Os testes foram realizados utilizando ferramentas como Thunder Client.
 
@@ -694,7 +687,7 @@ Ao enviar uma requisição POST sem conteúdo Json o retorno da aplicação é u
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/16.png)
 
 --------------------------------------------------------------------------------
-## Roteiro de Testes da API de Tarefas (Testes em cloud)
+## Roteiro de Testes da API de Tarefas em cloud
 
 Roteiro de testes realizados na API de gerenciamento de tarefas construída com Node.js, Express e MongoDB. Os testes foram realizados utilizando ferramentas como Thunder Client
 
