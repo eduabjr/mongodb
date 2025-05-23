@@ -53,19 +53,19 @@ Gerenciamento automatizado: Atlas cuida de backups, atualizações, segurança e
 2. Multiplataforma e Escalável
 Nuvem pública: Disponível na AWS, Google Cloud e Microsoft Azure.
 
-Escalabilidade horizontal: Aumente a capacidade do banco de dados sob demanda.
+3. Escalabilidade horizontal: Aumente a capacidade do banco de dados sob demanda.
 
-Alta Disponibilidade e Tolerância a Falhas
+4. Alta Disponibilidade e Tolerância a Falhas
 Replicação automática: Dados são copiados em múltiplos nós (replica sets) para evitar perdas.
 
-Failover automático: Se um servidor falhar, outro assume instantaneamente.
+5. Failover automático: Se um servidor falhar, outro assume instantaneamente.
 
-4. Segurança Avançada
+6. Segurança Avançada
 Criptografia em repouso e em trânsito.
 
-Controle de acesso: Autenticação por usuário/senha, integração com LDAP e IAM da AWS.
+7. Controle de acesso: Autenticação por usuário/senha, integração com LDAP e IAM da AWS.
 
-Firewall e VPC Peering: Restringe acesso apenas a IPs autorizados.
+8. Firewall e VPC Peering: Restringe acesso apenas a IPs autorizados.
 
 
 ## Objetivos do projeto:
@@ -88,7 +88,7 @@ Firewall e VPC Peering: Restringe acesso apenas a IPs autorizados.
 
 
 ## Escolha do projeto:
-Nosso Grupo escolheu um Sistema de Gerenciamento de Tarefas para Equipes
+Nosso Grupo escolheu um Sistema de Gerenciamento de Tarefas para Equipes.
 
 ### Funcionalidades:
 
@@ -366,9 +366,70 @@ var tarefas = new Schema({
 
 ## Pré - Requisitos
 
+#### 1° Instalar Node.js 
+Essencial porque o projeto vai usar JavaScript no backend.
+
+Baixe e instale aqui:
+👉 https://nodejs.org/pt/download
+
+------------
+#### 2° Instalar um editor de código 
+Recomendado utilizar o VS Code
+
+Baixe e instale aqui:
+👉 https://code.visualstudio.com/
+
+------------
+
 ## Instrução de Instalação
 
-Instale my-project com npm
+### 1º Criar a pasta do projeto Pelo terminal
+
+Abra o terminal no VS Code e digite:
+
+```bash
+ Ctrl + '
+```
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/18.png)
+
+(Abre um terminal interno)
+
+### 2º Digite no terminal o seguinte código:
+
+```bash
+mkdir coloque-o-nome-do-projeto
+cd coloque-o-nome-do-projeto
+```
+Logo após aperte "Enter"
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/19.png)
+
+
+Será gerado em "C:\Users\Usuário" a pasta do projeto com o nome escolhido.
+
+### 3º Localizar pasta e seleciona-la:
+
+Atraves do VS Code siga este caminho
+
+Clique em Arquivo > Abrir Pasta > Vá no Disco C do Computador> Selecione a Pasta Usuários > Selecione a Pasta Usuário > Selecione a Pasta do Projeto
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/21.png)
+
+
+### 4º Iniciar o projeto Node.js
+
+No terminal, dentro da pasta do projeto:
+
+```bash
+npm init -y
+```
+
+
+
+
+
+
+
 
 ```bash
   npm install my-project
