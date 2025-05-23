@@ -409,7 +409,7 @@ Será gerado em "C:\Users\Usuário" a pasta do projeto com o nome escolhido.
 
 ### 3º Localizar pasta e seleciona-la:
 
-Atraves do VS Code siga este caminho
+Através do VS Code siga este caminho:
 
 Clique em Arquivo > Abrir Pasta > Vá no Disco C do Computador> Selecione a Pasta Usuários > Selecione a Pasta Usuário > Selecione a Pasta do Projeto
 
@@ -418,23 +418,35 @@ Clique em Arquivo > Abrir Pasta > Vá no Disco C do Computador> Selecione a Past
 
 ### 4º Iniciar o projeto Node.js
 
-No terminal, dentro da pasta do projeto:
+No terminal, dentro da pasta do projeto digite o codigo abaixo e aperte enter:
 
 ```bash
 npm init -y
 ```
 
+Será criado o package.json, que guarda os dados do projeto e dependências.
 
+### 5º Instalar os pacotes
 
-
-
-
-
+No terminal digite o codigo abaixo e aperte enter:
 
 ```bash
-  npm install my-project
-  cd my-project
+npm install express mongoose dotenv cors
+npm install --save-dev nodemon
 ```
+
+Será criado:
+
+- express: framework web
+
+- mongoose: conexão com MongoDB
+
+- dotenv: permite usar variáveis secretas no .env
+
+- cors: libera acesso à API de outros domínios
+
+- nodemon: reinicia o servidor automaticamente em modo desenvolvimento
+
 
 ## Instrução de Uso    
 ```bash
