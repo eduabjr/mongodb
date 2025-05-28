@@ -1075,24 +1075,20 @@ Retornado:
 ## Licença
 Este projeto está licenciado sob a licença MIT . Sinta-se à vontade para editar e distribuir este modelo como desejar. 
 
-Veja a LICENÇA 
-[LICENÇA](https://github.com/eduabjr/mongodb/blob/main/LICENSE) para mais informações.
+Veja a Licença [aqui](https://github.com/eduabjr/mongodb/blob/main/LICENSE) para mais informações.
 
 
 ## Referência
 
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+- [Make a Readme](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
 
-Youtube
-https://www.youtube.com/watch?v=k4Rsy8GbKE0
+- [Standard Readme](https://github.com/RichardLitt/standard-readme)
+ 
+- [Como Criar Seus Readmes? Guia do Readme Completo](https://www.youtube.com/watch?v=k4Rsy8GbKE0)
 
-Github
-https://github.com/RichardLitt/standard-readme
 
-Site
-https://www.makeareadme.com/
+
+
 ## Suporte
 
 Para suporte, mande um e-mail para uscsfaculdade3@gmail.com
