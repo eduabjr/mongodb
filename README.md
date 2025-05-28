@@ -1073,8 +1073,10 @@ Retornado:
 
 
 ## Licença
+Este projeto está licenciado sob a licença MIT . Sinta-se à vontade para editar e distribuir este modelo como desejar. 
 
-[MIT](https://github.com/eduabjr/mongodb/blob/main/LICENSE)
+Veja a LICENÇA 
+[LICENÇA](https://github.com/eduabjr/mongodb/blob/main/LICENSE) para mais informações.
 
 
 ## Referência
@@ -1083,8 +1085,34 @@ Retornado:
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
  - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
+Youtube
+https://www.youtube.com/watch?v=k4Rsy8GbKE0
 
-## Agradeciomento
+Github
+https://github.com/RichardLitt/standard-readme
+
+Site
+https://www.makeareadme.com/
+## Suporte
+
+Para suporte, mande um e-mail para uscsfaculdade3@gmail.com
+
+## Agradecimento
 Obrigado por esses recursos incríveis que foram usados ​​durante o desenvolvimento do incrível modelo do GitHub :
 
-links
+Links:
+
+- Hackolade - Para criação da modelagem das collections e seus relacionamentos
+https://hackolade.com/
+
+- Readme.so - Editor que permite adicionar e personalizar facilmente todas as seções e a visualização de um readme
+https://readme.so/pt
+
+- Visual Studio -  Editor de código e um Ambiente de Desenvolvimento Integrado (IDE) da Microsoft
+https://code.visualstudio.com/
+
+- Node.js - É um ambiente de execução de JavaScript no lado do servidor, que permite executar scripts JavaScript fora do navegador, como em computadores ou servidores.
+https://nodejs.org/pt/download
+
+- MongoDb Atlas - é um serviço de banco de dados em nuvem totalmente gerenciado, oferecido pela MongoDB Inc.
+https://www.mongodb.com/pt-br/cloud/atlas/
