@@ -23,26 +23,6 @@
 * [Referência](#referência)
 * [Agradecimento](#agradecimento)
 
-## Sumário
-
-* [Sobre](#sobre)
-* [Objetivos do Projeto](#objetivos-do-projeto)
-* [Membros do Grupo](#membros-do-grupo)
-* [Começando](#começando)
-* [Modelagem do Hackolade](#modelagem-do-hackolade)
-* [Pré-requisitos](#pré-requisitos)
-* [Instrução de Instalação](#instrução-de-instalação)
-* [Instrução de Uso](#instrução-de-uso)
-* [Roteiro de Testes da API de Tarefas em localhost](#roteiro-de-testes-da-api-de-tarefas-em-localhost)
-* [Roteiro de Testes da API de Tarefas em cloud](#roteiro-de-testes-da-api-de-tarefas-em-cloud)
-* [Suporte](#suporte)
-* [Licença](#licença)
-* [Referência](#referência)
-* [Agradecimento](#agradecimento)
-
-
-
-
 
 
 
@@ -392,7 +372,7 @@ var tarefas = new Schema({
 });
  ```
 
-## Pré - Requisitos
+## Pré-Requisitos
 
 #### 1° Instalar Node.js 
 Essencial porque o projeto vai usar JavaScript no backend.
