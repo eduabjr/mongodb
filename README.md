@@ -22,6 +22,30 @@
 * [Licença](#licença)
 * [Referência](#referência)
 * [Agradecimento](#agradecimento)
+
+## Sumário
+
+* [Sobre](#sobre)
+* [Objetivos do Projeto](#objetivos-do-projeto)
+* [Membros do Grupo](#membros-do-grupo)
+* [Começando](#começando)
+* [Modelagem do Hackolade](#modelagem-do-hackolade)
+* [Pré-requisitos](#pré-requisitos)
+* [Instrução de Instalação](#instrução-de-instalação)
+* [Instrução de Uso](#instrução-de-uso)
+* [Roteiro de Testes da API de Tarefas em localhost](#roteiro-de-testes-da-api-de-tarefas-em-localhost)
+* [Roteiro de Testes da API de Tarefas em cloud](#roteiro-de-testes-da-api-de-tarefas-em-cloud)
+* [Suporte](#suporte)
+* [Licença](#licença)
+* [Referência](#referência)
+* [Agradecimento](#agradecimento)
+
+
+
+
+
+
+
 ## Sobre
 
 Neste projeto, o grupo desenvolveu uma API RESTful que permita realizar operações básicas de CRUD (Create, Read, Update, Delete) em um banco de dados MongoDB. A instancia do mongodb utilizada no projeto pode estar na máquina local ou no serviço em nuvem MondoDB Atlas.
