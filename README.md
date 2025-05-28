@@ -14,13 +14,13 @@
 * [Membros do Grupo](#membros-do-grupo)
 * [Começando](#começando)
 * [Modelagem do Hackolade](#modelagem-do-hackolade)
-* [Pré-requisitos](#pré-requisitos)
+* [Pré-Requisitos](#pré-requisitos)
 * [Instrução de Instalação](#instrução-de-instalação)
 * [Roteiro de Testes da API de Tarefas em localhost](#roteiro-de-testes-da-api-de-tarefas-em-localhost)
 * [Roteiro de Testes da API de Tarefas em cloud](#roteiro-de-testes-da-api-de-tarefas-em-cloud)
-* [Referência](#referência)
-* [Licença](#licença)
 * [Suporte](#suporte)
+* [Licença](#licença)
+* [Referência](#referência)
 * [Agradecimento](#agradecimento)
 ## Sobre
 
