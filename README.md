@@ -7,17 +7,21 @@
 [![Licença](https://img.shields.io/badge/Licença-MIT-green.svg)](https://github.com/eduabjr/mongodb/blob/main/LICENSE) [![Teste Local Host](https://img.shields.io/badge/Testes-Localhost-brightgreen.svg)](https://github.com/eduabjr/mongodb/blob/main/README.md#roteiro-de-testes-da-api-de-tarefas-em-localhost) [![Teste cloud](https://img.shields.io/badge/Testes-cloud-brightred.svg)](https://github.com/eduabjr/mongodb/blob/main/README.md#roteiro-de-testes-da-api-de-tarefas-em-cloud) [![Membros do Grupo](https://img.shields.io/badge/Membros%20do%20Grupo-5-blue.svg)](https://github.com/eduabjr/mongodb?tab=readme-ov-file#membros-do-grupo) 
 
 
-## Súmario
+## Sumário
 
 * [Sobre](#sobre)
+* [Objetivos do Projeto](#objetivos-do-projeto)
 * [Membros do Grupo](#membros-do-grupo)
 * [Começando](#começando)
 * [Modelagem do Hackolade](#modelagem-do-hackolade)
+* [Pré-requisitos](#pré-requisitos)
+* [Instrução de Instalação](#instrução-de-instalação)
 * [Roteiro de Testes da API de Tarefas em localhost](#roteiro-de-testes-da-api-de-tarefas-em-localhost)
 * [Roteiro de Testes da API de Tarefas em cloud](#roteiro-de-testes-da-api-de-tarefas-em-cloud)
 * [Referência](#referência)
 * [Licença](#licença)
-* [Agradeciomento](#agradeciomento)
+* [Suporte](#suporte)
+* [Agradecimento](#agradecimento)
 ## Sobre
 
 Neste projeto, o grupo desenvolveu uma API RESTful que permita realizar operações básicas de CRUD (Create, Read, Update, Delete) em um banco de dados MongoDB. A instancia do mongodb utilizada no projeto pode estar na máquina local ou no serviço em nuvem MondoDB Atlas.
@@ -1080,12 +1084,11 @@ Veja a Licença [aqui](https://github.com/eduabjr/mongodb/blob/main/LICENSE) par
 
 ## Referência
 
-- [Make a Readme](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+- Site: [Make a Readme](https://awesomeopensource.com/project/elangosundar/awesome-README-templates) - Acesso em: 14 mai. 2025.
 
-- [Standard Readme](https://github.com/RichardLitt/standard-readme)
+- Site: [Standard Readme](https://github.com/RichardLitt/standard-readme) - Acesso em: 14 mai. 2025.
  
-- [Como Criar Seus Readmes? Guia do Readme Completo](https://www.youtube.com/watch?v=k4Rsy8GbKE0)
-
+- Youtube: [Como Criar Seus Readmes? Guia do Readme Completo](https://www.youtube.com/watch?v=k4Rsy8GbKE0) - Acesso em: 14 maio. 2025.
 
 
 
