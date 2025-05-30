@@ -16,6 +16,8 @@
 
 * [Modelagem do Hackolade](#modelagem-do-hackolade)
 
+* [Instrução de Uso](#instrução-de-uso)
+  
 * [Pré-requisitos](#pré-requisitos)
 
 * [Instrução de Instalação](#instrução-de-instalação)
