@@ -177,7 +177,7 @@ Neste passo é documentado tudo o que aconteceu nos passos anteriores e informa�
 
 # Modelagem do Hackolade
 
-![](https://raw.githubusercontent.com/eduabjr/mongodb/main/Modelagem/Captura%20de%20tela%202025-04-16%20001404.png)
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/40.png)
 
 Na imagem acima é possível analisar todo como o modelo foi planejado, assim como o relacionamento entre as collections e os campos required / obrigatórios (identificados por um * ao lado dos dados).
 
