@@ -1,4 +1,3 @@
-
 ![Logo](https://upload.wikimedia.org/wikipedia/commons/0/00/Mongodb.png)
 
 
@@ -22,15 +21,11 @@
 * [Licença](#licença)
 * [Referência](#referência)
 * [Agradecimento](#agradecimento)
-
-
-
-
 ## Sobre
 
-Neste projeto, o grupo desenvolveu uma API RESTful que permita realizar operações básicas de CRUD (Create, Read, Update, Delete) em um banco de dados MongoDB. A instancia do mongodb utilizada no projeto pode estar na máquina local ou no serviço em nuvem MondoDB Atlas.
+Neste projeto, o grupo desenvolveu uma API RESTful que permita realizar operações básicas de CRUD (Create, Read, Update, Delete) em um banco de dados MongoDB. A instancia do Mongodb utilizada no projeto pode estar na máquina local ou no serviço em nuvem MondoDB Atlas.
 
-### Conhendo as Tecnologias empregadas
+### Conhecendo as Tecnologias empregadas
 
 #### MongoDB
 
@@ -50,7 +45,7 @@ Desempenho: Frequentemente oferece alto desempenho para operações de leitura e
 
 O Que é e como funciona o MongoDB Atlas?
 
-O MongoDB Atlas é um serviço de banco de dados em nuvem totalmente gerenciado, oferecido pela MongoDB Inc. Ele permite que desenvolvedores e empresas implantem, operem e escalem bancos de dados MongoDB sem precisar gerenciar servidores físicos ou configurações complexas.
+O MongoDB Atlas é um serviço de banco de dados em nuvem totalmente gerenciado, oferecido pela MongoDB Inc. Ele permite que desenvolvedores e empresas implantem, operem e escalem bancos de dados MongoDB sem precisar gerenciar servidores físicos ou configurações complexas.
 
 ##### Principais Características:
 1. Banco de Dados como Serviço (DBaaS)
@@ -61,7 +56,7 @@ Gerenciamento automatizado: Atlas cuida de backups, atualizações, segurança e
 2. Multiplataforma e Escalável
 Nuvem pública: Disponível na AWS, Google Cloud e Microsoft Azure.
 
-3. Escalabilidade horizontal: Aumente a capacidade do banco de dados sob demanda.
+3. Escalabilidade horizontal: Aumente a capacidade do banco de dados sob demanda.
 
 4. Alta Disponibilidade e Tolerância a Falhas
 Replicação automática: Dados são copiados em múltiplos nós (replica sets) para evitar perdas.
@@ -73,7 +68,7 @@ Criptografia em repouso e em trânsito.
 
 7. Controle de acesso: Autenticação por usuário/senha, integração com LDAP e IAM da AWS.
 
-8. Firewall e VPC Peering: Restringe acesso apenas a IPs autorizados.
+8. Firewall e VPC Peering: Restringe acesso apenas a IP’s autorizados.
 
 
 ## Objetivos do projeto:
@@ -116,8 +111,7 @@ Consulta rápida do histórico de mudanças de status de uma tarefa.
 Node.js com Express:
 
 Express é um framework web para Node.js que simplifica o desenvolvimento de aplicações
-web e APIs, proporcionando uma estrutura robusta para lidar com rotas, middlewares e
-muito mais.
+web e APIs, proporcionando uma estrutura robusta para lidar com rotas, middlewares e muito mais.
 
 Linguagem: JavaScript (ou TypeScript)
 Documentação: https://expressjs.com/
@@ -126,7 +120,7 @@ Documentação: https://expressjs.com/
 
 [![Eduardo](https://github.com/eduabjr.png?size=80)](https://github.com/eduabjr) [![Enzo](https://github.com/enzomartinsg.png?size=80)](https://github.com/enzomartinsg) [![Diogo](https://github.com/DiogoBastos-C.png?size=80)](https://github.com/DiogoBastos-C) [![Lucas](https://github.com/LucasCG-uscs.png?size=80)](https://github.com/LucasCG-uscs) [![Tiago](https://github.com/tiagosilva-025.png?size=80)](https://github.com/tiagosilva-025) [![Carlos](https://github.com/Edu1910-sl.png?size=80)](https://github.com/Edu1910-sl)
 # Começando
-Ao início do desenvolvimento do projeto do mongoDB, foram dividas algumas tarefas para que fossem mais facilmete administradas pelos membos do grupo:
+Ao início do desenvolvimento do projeto do MongoDB, foram dividas algumas tarefas para que fossem mais facilmente administradas pelos membros do grupo:
 
 ### 1º Modelagem do Hackolade e Estrutura do Banco (MongoDB)
 
@@ -160,7 +154,7 @@ Ao início do desenvolvimento do projeto do mongoDB, foram dividas algumas taref
 
 ### 4º Documentação (README.md e Manual de Uso)
 
-Neste passo é documentado tudo o que aconteceu nos passsos anteriores e informações como: 
+Neste passo é documentado tudo o que aconteceu nos passos anteriores e informações como: 
 
 - Descrição do projeto.
 
@@ -187,7 +181,7 @@ Neste passo é documentado tudo o que aconteceu nos passsos anteriores e informa
 
 Na imagem acima é possível analisar todo como o modelo foi planejado, assim como o relacionamento entre as collections e os campos required / obrigatórios (identificados por um * ao lado dos dados).
 
-Cada collection possui um identificador principal (_id), um campo de nome (ou titulo para tarefas) e uma descrição (apenas com exceção dos usuários), e outros campos diversos que variam de acordo com a collection.
+Cada collection possui um identificador principal (_id), um campo de nome (ou título para tarefas) e uma descrição (apenas com exceção dos usuários), e outros campos diversos que variam de acordo com a collection.
 
 Nas collections usuários, equipes e projetos, é possível ver que há um subdocumento em cada uma, pois cada uma dessas collections em específico possui um dado e um relacionamento que depende de outra collection. 
 
@@ -205,7 +199,7 @@ A modelagem hackolade também possui campos definidos como “required”, que n
 
 •	O subdocumento equipes da collection usuários não é obrigatório, pois pode haver o cadastro de um usuário que no momento ele não possui uma equipe.
 
-•	Todos os campos descrições das collections não precisam necessariamente estar preenchidos pra registrar um indivíduo.
+•	Todos os campos descrições das collections não precisam necessariamente estar preenchidos para registrar um indivíduo.
 
 •	O subdocumento projetos da collection equipes também não é obrigatório, uma equipe pode estar sem projetos no momento.
 
@@ -223,7 +217,7 @@ Por fim disso tudo, na collection tarefas foi definido campos “Enum” em stat
 
 ## Códigos das Collections (schema mongoose):
 
-Um Schema do Mongoose define a estrutura dos documentos dentro de uma coleção MongoDB. É essencialmente um projeto que dita os tipos de dados que podem ser armazenados, seus valores padrão, regras de validação e outras propriedades. Com isso, foi produzido 4 schemas com base no que foi estruturado na modelagem, sendo as 4 tabelas: Usuários, Equipes, Projetos e Tarefas. É importante mencionar também que a partir desses schemas foi planejado o back end do banco MongoDB
+Um Schema do Mongoose define a estrutura dos documentos dentro de uma coleção MongoDB. É essencialmente um projeto que dita os tipos de dados que podem ser armazenados, seus valores padrão, regras de validação e outras propriedades. Com isso, foi produzido 4 schemas com base no que foi estruturado na modelagem, sendo as 4 tabelas: Usuários, Equipes, Projetos e Tarefas. É importante mencionar também que a partir desses schemas foi planejado o back end do banco MongoDB
 
 ### Collection Usuários
 ```bash   
@@ -372,9 +366,23 @@ var tarefas = new Schema({
 });
  ```
 
-## Pré-Requisitos
+## Instrução de Uso   
 
-#### 1° Instalar Node.js 
+#### 1° Baixe o repositório completo através do botão "Code" no formato zip e extraia seu conteúdo em sua máquina.
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/23.png)
+
+#### Ou você pode baixar apenas o arquivo zip com o nome "MongoDBAPi.zip"que está pronto para ser executado, basta extrai-lo em sua maquina
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/25.png)
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/27.png)
+
+
+#### 2° Seguir as instruções dentro dos Pré-Requisitos e depois o passo a passo de instalação. 
+
+# Pré-Requisitos
+
+#### 1° Instalar Node.js ou utilizar
 Essencial porque o projeto vai usar JavaScript no backend.
 
 Baixe e instale aqui:
@@ -389,7 +397,17 @@ Baixe e instale aqui:
 
 ------------
 
+
+
+
+
 ## Instrução de Instalação
+
+
+
+
+
+
 
 ### 1º Criar a pasta do projeto Pelo terminal
 
@@ -456,7 +474,7 @@ Será criado:
 - nodemon: reinicia o servidor automaticamente em modo desenvolvimento
 
 
-## Instrução de Uso    
+ 
 ```bash
 
 ```
@@ -523,7 +541,7 @@ Retornado:
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/1.png)
 
-sem alterações no método POST, continuando com o seu funcionamento correto
+Sem alterações no método POST, continuando com o seu funcionamento correto
 
 ### 2. POST /tarefas – Criar nova tarefa (Erro: campo obrigatório faltando)
 
@@ -572,7 +590,7 @@ Retornado:
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/2.png)
 
-após a atualização dos arquivos, o bloqueio do método POST para campos obrigatórios continua funcionando corretamente.
+Após a atualização dos arquivos, o bloqueio do método POST para campos obrigatórios continua funcionando corretamente.
 
 
 ### 3. GET /tarefas – Listar tarefas (Sucesso)
@@ -810,7 +828,7 @@ Retornado:
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/14.png)
 
-A aplicação ignora campos extras inseridos no Json e insere no banco de dados apenas campos reconhecidos .
+A aplicação ignora campos extras inseridos no Json e insere no banco de dados apenas campos reconhecidos.
 
 ### 8.2.2
 Método: PUT
@@ -838,7 +856,7 @@ Retornado:
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagem%20dos%20testes/15.png)
 
 
-A aplicação ignora campos extras inseridos no Json e insere no banco de dados apenas campos reconhecidos .
+A aplicação ignora campos extras inseridos no Json e insere no banco de dados apenas campos reconhecidos.
 
 ### 8.3 Requisição sem Content-Type: application/json
 Método: POST
@@ -863,7 +881,16 @@ Ao enviar uma requisição POST sem conteúdo Json o retorno da aplicação é u
 Roteiro de testes realizados na API de gerenciamento de tarefas construída com Node.js, Express e MongoDB. Os testes foram realizados utilizando ferramentas como Thunder Client
 
 A base da API está rodando localmente no seguinte endereço:
-???
+
+```bash 
+mongodb+srv://diogocustodiobastos:1984.1XZGcj@cluster0.jm4bj76.mongodb.net/gerenciador?retryWrites=true&w=majority&appName=Cluster0
+   ```
+Os testes foram realizados utilizando a seguinte request URL no Thunder Client:
+
+```bash 
+http://localhost:3000/tarefas
+   ```
+
 ### 1. POST /tarefas – Criar nova tarefa
 Método: POST
 
@@ -885,8 +912,9 @@ Retorno do Json com a Tarefa criada
 
 Retornado:
 
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/28.png)
 
+O método POST está funcionando corretamente, e o JSON Content enviado na requisição foi inserido como esperado na Collection Tarefas no banco de dados Gerenciador no Cluster0 do Atlas
 
 ### 2. POST /tarefas – Criar nova tarefa (Erro: campo obrigatório faltando)
 Método: POST
@@ -905,7 +933,9 @@ Erro 400 ou 500. Validação indicando campo obrigatório faltando.
  ```
 Retornado:
 
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/29.png)
+
+A validação para campo obrigatório está funcionando como esperado.
 
 ### 3. GET /tarefas – Listar tarefas (Sucesso)
 Método: GET
@@ -919,7 +949,9 @@ Status 200. Retorna array com todas as tarefas.
 
 Retornado:
 
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/30.png)
+
+O método GET está funcionando como esperado e retornando corretamente as tarefas existentes
 
 ### 4. PUT /tarefas/:id – Atualizar tarefa (Sucesso)
 Método: PUT
@@ -940,7 +972,9 @@ Status 200. Retorna JSON da tarefa atualizada.
 ```
 
 Retornado:
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/31.png)
+
+O método PUT está funcionando como esperado e a atualização está sendo feito corretamente na Collection Tarefas no banco de dados Gerenciador no Cluster0 do Atlas
 
 ### 5. PUT /tarefas/:id – Atualizar tarefa (Erro: ID inválido)
 Método: PUT
@@ -962,7 +996,9 @@ Erro 404 ou 500. ID inválido ou tarefa não encontrada.
 ```
 Retornado:
 
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/32.png)
+
+A validação de ID de tarefa para atualizar tarefa está funcionando como esperado.
 
 ### 6. DELETE /tarefas/:id – Deletar tarefa (Sucesso)
 Método: DELETE
@@ -974,7 +1010,9 @@ Esperado:
 Status 200. Mensagem de sucesso ao deletar tarefa. 
 ```
 Retornado:
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/33.png)
+
+O método DELETE está funcionando como esperado e a Deleção está sendo feito corretamente na Collection Tarefas no banco de dados Gerenciador no Cluster0 do Atlas
 
 ### 7. DELETE /tarefas/:id – Deletar tarefa (Erro: ID não encontrado)
 Método: DELETE
@@ -986,9 +1024,10 @@ Esperado:
 Erro 404. Mensagem de tarefa não encontrada.
 ```
 
-
 Retornado:
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/34.png)
+
+A validação para ID inexistente está funcionando como esperado.
 
 ### 8. Testes Extras de Validação
 
@@ -1017,7 +1056,9 @@ Erro 400 ou 500 - Validação do status
 
 Retornado:
 
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/35.png)
+
+A validação de Status está funcionando como esperado.
 
 ## 8.2 Enviar campo extra no POST/PUT
 ### 8.2.1
@@ -1041,8 +1082,9 @@ Ignorado ou salvo (dependendo da modelagem)
 
 Retornado:
 
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/36.png)
 
+A modelagem do banco foi feita de tal forma que ao tentar inserir um campo extra numa requisição com método POST a inserção acontecerá normalmente, porém o campo extra será ignorado.
 
 ### 8.2.2
 Método: PUT
@@ -1065,7 +1107,10 @@ Ignorado ou salvo (dependendo da modelagem)
  ```
 Retornado:
 
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/37.png)
+
+Da mesma forma como na requisição feita Através do método POST, o método PUT fará a atualização, porém irá ignorar o campo extra inserido no JSON Content.
+
 ### 8.3 Requisição sem Content-Type: application/json
 Método: POST
 
@@ -1077,11 +1122,13 @@ Erro 400 - Parsing inválido
 ```
 Retornado:
 
-?????????????
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/38.png)
 
+
+Ao tentar inserir uma tarefa por meio de uma requisição de método POST sem um JSON Content ele não retorna o erro 400 como esperado, porém é gerado um erro 500 associado à validação de campo obrigatório para o método POST, sendo assim uma trava existente também para impedir a inserção de tarefas com ausência de campos.
 
 ## Licença
-Este projeto está licenciado sob a licença MIT . Sinta-se à vontade para editar e distribuir este modelo como desejar. 
+Este projeto está licenciado sob a licença MIT. Sinta-se à vontade para editar e distribuir este modelo como desejar. 
 
 Veja a Licença [aqui](https://github.com/eduabjr/mongodb/blob/main/LICENSE) para mais informações.
 
@@ -1101,21 +1148,18 @@ Veja a Licença [aqui](https://github.com/eduabjr/mongodb/blob/main/LICENSE) par
 Para suporte, mande um e-mail para uscsfaculdade3@gmail.com
 
 ## Agradecimento
-Obrigado por esses recursos incríveis que foram usados ​​durante o desenvolvimento do incrível modelo do GitHub :
+Obrigado por esses recursos incríveis que foram usados durante o desenvolvimento do incrível modelo do GitHub:
 
 Links:
 
-- Hackolade - Para criação da modelagem das collections e seus relacionamentos
-https://hackolade.com/
+- Hackolade - Para criação da modelagem das collections e seus relacionamentos. https://hackolade.com/
 
-- Readme.so - Editor que permite adicionar e personalizar facilmente todas as seções e a visualização de um readme
-https://readme.so/pt
+- Readme.so - Editor que permite adicionar e personalizar facilmente todas as seções e a visualização de um readme. https://readme.so/pt
 
-- Visual Studio -  Editor de código e um Ambiente de Desenvolvimento Integrado (IDE) da Microsoft
-https://code.visualstudio.com/
+- Visual Studio -  Editor de código e um Ambiente de Desenvolvimento Integrado (IDE) da Microsoft. https://code.visualstudio.com/
 
-- Node.js - É um ambiente de execução de JavaScript no lado do servidor, que permite executar scripts JavaScript fora do navegador, como em computadores ou servidores.
-https://nodejs.org/pt/download
+- Node.js - É um ambiente de execução de JavaScript no lado do servidor, que permite executar scripts JavaScript fora do navegador, como em computadores ou servidores. https://nodejs.org/pt/download
 
-- MongoDb Atlas - é um serviço de banco de dados em nuvem totalmente gerenciado, oferecido pela MongoDB Inc.
-https://www.mongodb.com/pt-br/cloud/atlas/
+- MongoDb Atlas - é um serviço de banco de dados em nuvem totalmente gerenciado, oferecido pela MongoDB Inc. https://www.mongodb.com/pt-br/cloud/atlas/
+
+- Thunder Client - é uma ferramenta de teste de API REST fácil de usar e leve, integrada perfeitamente como uma extensão no Visual Studio Code. https://www.thunderclient.com/
