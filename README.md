@@ -1141,7 +1141,9 @@ Veja a Licença [aqui](https://github.com/eduabjr/mongodb/blob/main/LICENSE) par
  
 - Youtube: [Como Criar Seus Readmes? Guia do Readme Completo](https://www.youtube.com/watch?v=k4Rsy8GbKE0) - Acesso em: 14 maio. 2025.
 
+- Youtube: [#1 NÍVEIS DE TESTES | 5 DICAS DE TESTES UNITÁRIOS](https://www.youtube.com/watch?v=rX1MJwVAlus&t=3s) - Acesso em: 10 maio. 2025.
 
+- Youtube: [#2 NÍVEIS DE TESTES | O QUE SÃO TESTES DE INTEGRAÇÃO?](https://www.youtube.com/watch?v=ewAwf02QVnQ) - Acesso em: 10 maio. 2025.
 
 ## Suporte
 
