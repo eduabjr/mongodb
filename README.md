@@ -586,13 +586,13 @@ Baixe e instale aqui:
 
 O arquivo ficará disponivel para ser renomeado.
 
-### 5º Iremos incluir um ponto no incio do nome do arquivo "env", desta forma o arquivo ficara  ".env" (se prestar atenção até o simbolo muda dentro do VS Code)e após incluir o ponto aperte "Enter". 
+### 5º Iremos incluir um ponto no incio do nome do arquivo "env", desta forma o arquivo ficara  ".env" (se você observar o simbolo dentro do VS Code para o env muda) e após incluir o ponto aperte "Enter". 
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/44.png)
 
 ### 6º Com esses ajustes feitos iremos agora começar a executar a instalação dos comandos necessários para executar a API.
 
-#### 6.1º Abra o terminal no VS Code e digite:
+#### 6.1º Com o VS Code aberto utilize o comando:
 
 ```bash
  Ctrl + '
@@ -600,7 +600,7 @@ O arquivo ficará disponivel para ser renomeado.
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/18.png)
 
-(Abre um terminal interno)
+(Será aberto um terminal interno para digitar comandos)
 
 #### 6.2º Digite no terminal o seguinte código:
 
