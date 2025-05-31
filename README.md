@@ -17,7 +17,9 @@
 * [Modelagem do Hackolade](#modelagem-do-hackolade)
 
 * [Instrução de Uso](#instrução-de-uso)
+
   
+
 * [Pré-requisitos](#pré-requisitos)
 
 * [Instrução de Instalação](#instrução-de-instalação)
@@ -54,7 +56,7 @@ Desempenho: Frequentemente oferece alto desempenho para operações de leitura e
 
 3. Orientado a Documentos: A modelagem de dados com documentos geralmente se alinha melhor com a forma como os objetos são representados em linguagens de programação, simplificando o desenvolvimento de aplicações.
 
-4. Suporte à Agregação: Possui um poderoso framework de agregação que permite processar dados dentro do banco de dados, realizando operações como agrupamento, filtragem e transformação.
+4. Suporte à Agregação: possui um poderoso framework de agregação que permite processar dados dentro do banco de dados, realizando operações como agrupamento, filtragem e transformação.
 
 #### MongoDB Atlas
 
@@ -220,7 +222,7 @@ A modelagem Hackolade também possui campos definidos como “required”, que s
 
 ### É importante mencionar que nem todos os campos foram definidos como required, pois existem exceções em algumas ocasiões:
 
-•	O subdocumento equipes da collection usuários não é obrigatório, pois pode haver o cadastro de um usuário que, no momento, ele não possui uma equipe.
+•	O subdocumento equipes da collection usuários não é obrigatório, pois pode haver o cadastro de um usuário que, no momento, não possui uma equipe.
 
 •	Todos os campos de descrição das collections não precisam necessariamente estar preenchidos para registrar um indivíduo.
 
@@ -240,7 +242,7 @@ Por fim, disso tudo, na collection tarefas, foram definidos campos “Enum” em
 
 ## Códigos das Collections (schema mongoose):
 
-Um Schema do Mongoose define a estrutura dos documentos dentro de uma coleção MongoDB. É essencialmente um projeto que dita os tipos de dados que podem ser armazenados, seus valores padrão, regras de validação e outras propriedades. Com isso, foram produzidos 4 schemas com base no que foi estruturado na modelagem, sendo as 4 tabelas: Usuários, Equipes, Projetos e Tarefas. É importante mencionar também que, a partir desses schemas, foi planejado o back end do banco MongoDB.
+Um Schema do Mongoose define a estrutura dos documentos dentro de uma coleção MongoDB. É essencialmente um projeto que dita os tipos de dados que podem ser armazenados, seus valores padrão, regras de validação e outras propriedades. Com isso, foram produzidos 4 schemas com base no que foi estruturado na modelagem, sendo as 4 tabelas: Usuários, Equipes, Projetos e Tarefas. É importante mencionar também que, a partir desses schemas, foi planejado o back-end do banco MongoDB.
 
 ### Collection Usuários
 
@@ -530,72 +532,74 @@ var tarefas = new Schema({
 
  ```
 
-
 ## Instrução de Uso   
 
-#### 1° Baixe o repositório completo através do botão "Code" no formato zip e extraia seu conteudo em sua maquina.
+#### 1° Baixe o repositório completo através do botão "Code" no formato zip e extraia seu conteúdo em sua máquina.
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/23.png)
 
-#### Ou você pode baixar apenas o arquivo zip com o nome "MongoDBAPi.zip"que está pronto para ser executado, basta extrailo em sua maquina
+#### Ou você pode baixar apenas o arquivo zip com o nome "MongoDBAPi.zip"que está pronto para ser executado, basta extrair em sua máquina.
+
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/25.png)
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/27.png)
 
-
-#### 2° Seguir as intruções dentro dos Pré-Pré-Requisitos e depois o passo a passo de instalação. 
+#### 2° Seguir as instruções dentro dos Pré-Requisitos e depois o passo a passo de instalação. 
 
 # Pré-Requisitos
 
 #### 1° Instalar Node.js ou utilizar
+
 Essencial porque o projeto vai usar JavaScript no backend.
 
 Baixe e instale aqui:
+
 👉 https://nodejs.org/pt/download
 
 ------------
+
 #### 2° Instalar um editor de código 
-Recomendado utilizar o VS Code
+
+Recomendado utilizar o VS Code.
 
 Baixe e instale aqui:
+
 👉 https://code.visualstudio.com/
 
 ------------
 
-
-
-
-
 ## Instrução de Instalação
 
-### 1º Abra o VS Code
+### 1º Abra o VS Code.
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/39.png)
 
-### 2º Clique em "Abrir a Pasta" e selecione a pasta do projeto com o nome de "MongoDBAPi"
+### 2º Clique em "Abrir a Pasta" e selecione a pasta do projeto com o nome de "MongoDBAPi".
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/41.png)
 
-### 3º Após isso a pasta do projeto e seus arquivos estarão dentro do explorador do VS Code
+### 3º Após isso, a pasta do projeto e seus arquivos estarão dentro do explorador do VS Code.
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/42.png)
 
-### 4º Para que o projeto seja executado precisamos fazer um ajuste no arquivo "env" dentro do projeto, clique nele com o mouse e aperte F2. 
+### 4º Para que o projeto seja executado, precisamos fazer um ajuste no arquivo "env" dentro do projeto, clique nele com o mouse e aperte F2. 
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/43.png)
 
-O arquivo ficará disponivel para ser renomeado.
+O arquivo ficará disponível para ser renomeado.
 
-### 5º Iremos incluir um ponto no incio do nome do arquivo "env", desta forma o arquivo ficara  ".env" (se você observar o simbolo dentro do VS Code para o env muda) e após incluir o ponto aperte "Enter". 
+### 5º Iremos incluir um ponto no início do nome do arquivo "env", desta forma o arquivo ficará ".env" (se você observar, o símbolo dentro do VS Code para o env muda) e após incluir o ponto, aperte "Enter". 
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/44.png)
 
-### 6º Com esses ajustes feitos iremos agora começar a executar a instalação dos comandos necessários para executar a API.
+### 6º Com esses ajustes feitos, iremos agora começar a executar a instalação dos comandos necessários para executar a API.
 
-#### 6.1º Com o VS Code aberto utilize o comando:
+#### 6.1º Com o VS Code aberto, utilize o comando:
 
 ```bash
+
  Ctrl + '
+
 ```
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/18.png)
@@ -605,38 +609,46 @@ O arquivo ficará disponivel para ser renomeado.
 #### 6.2º Digite no terminal o seguinte código:
 
 ```bash
+
 npm install
+
 ```
-Logo após aperte "Enter"
+
+Logo após, aperte "Enter".
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/45.png)
 
-
-Será gerado dentro do projeto uma pasta "node_modules" (ela ira armazenar todas as dependências externas, módulos e pacotes).
+Será gerada dentro do projeto uma pasta "node_modules" (ela irá armazenar todas as dependências externas, módulos e pacotes).
 
 #### 6.3º Digite no terminal o seguinte código:
 
 ```bash
+
 npm install mquery
+
 ```
-Logo após aperte "Enter"
+
+Logo após, aperte "Enter".
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/46.png)
 
-Será gerado dentro dentro da pasta "node_modules" um arquivo de nome "mquery" (uma biblioteca JavaScript usada principalmente para criar e manipular consultas MongoDB).
+Será gerado dentro da pasta "node_modules" um arquivo de nome "mquery" (uma biblioteca JavaScript usada principalmente para criar e manipular consultas MongoDB).
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/47.png)
 
-#### 6.4º Para finalizar iremos digitar no terminal o seguinte código:
+#### 6.4º Para finalizar, iremos digitar no terminal o seguinte código:
 
 ```bash
+
 node src/server.js
+
 ```
-Logo após aperte "Enter"
+
+Logo após, aperte "Enter".
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/48.png)
 
-O Código "node src/server.js" ira iniciar o servidor Node.js, executando o arquivo server.js que está dentro da pasta src.
+O código "node src/server.js" irá iniciar o servidor Node.js, executando o arquivo server.js que está dentro da pasta src.
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/49.png)
 
