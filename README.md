@@ -530,123 +530,115 @@ var tarefas = new Schema({
 
  ```
 
+
 ## Instrução de Uso   
 
-#### 1° Baixe o repositório completo através do botão "Code" no formato zip e extraia seu conteúdo em sua máquina.
+#### 1° Baixe o repositório completo através do botão "Code" no formato zip e extraia seu conteudo em sua maquina.
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/23.png)
 
-#### Ou você pode baixar apenas o arquivo zip com o nome "MongoDBAPi.zip"que está pronto para ser executado, basta extrai-lo em sua máquina.
-
+#### Ou você pode baixar apenas o arquivo zip com o nome "MongoDBAPi.zip"que está pronto para ser executado, basta extrailo em sua maquina
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/25.png)
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/27.png)
 
-#### 2° Seguir as instruções dentro dos Pré-Requisitos e depois o passo a passo de instalação. 
+
+#### 2° Seguir as intruções dentro dos Pré-Pré-Requisitos e depois o passo a passo de instalação. 
 
 # Pré-Requisitos
 
 #### 1° Instalar Node.js ou utilizar
-
 Essencial porque o projeto vai usar JavaScript no backend.
 
 Baixe e instale aqui:
-
 👉 https://nodejs.org/pt/download
 
 ------------
-
 #### 2° Instalar um editor de código 
-
-Recomendado utilizar o VS Code.
+Recomendado utilizar o VS Code
 
 Baixe e instale aqui:
-
 👉 https://code.visualstudio.com/
 
 ------------
 
+
+
+
+
 ## Instrução de Instalação
 
-### 1º Criar a pasta do projeto pelo terminal.
+### 1º Abra o VS Code
 
-Abra o terminal no VS Code e digite:
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/39.png)
+
+### 2º Clique em "Abrir a Pasta" e selecione a pasta do projeto com o nome de "MongoDBAPi"
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/41.png)
+
+### 3º Após isso a pasta do projeto e seus arquivos estarão dentro do explorador do VS Code
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/42.png)
+
+### 4º Para que o projeto seja executado precisamos fazer um ajuste no arquivo "env" dentro do projeto, clique nele com o mouse e aperte F2. 
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/43.png)
+
+O arquivo ficará disponivel para ser renomeado.
+
+### 5º Iremos incluir um ponto no incio do nome do arquivo "env", desta forma o arquivo ficara  ".env" (se prestar atenção até o simbolo muda dentro do VS Code)e após incluir o ponto aperte "Enter". 
+
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/44.png)
+
+### 6º Com esses ajustes feitos iremos agora começar a executar a instalação dos comandos necessários para executar a API.
+
+#### 6.1º Abra o terminal no VS Code e digite:
 
 ```bash
-
  Ctrl + '
-
 ```
 
 ![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/18.png)
 
 (Abre um terminal interno)
 
-### 2º Digite no terminal o seguinte código:
+#### 6.2º Digite no terminal o seguinte código:
 
 ```bash
-
-mkdir coloque-o-nome-do-projeto
-
-cd coloque-o-nome-do-projeto
-
+npm install
 ```
+Logo após aperte "Enter"
 
-Logo após, aperte "Enter".
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/45.png)
 
-![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/19.png)
 
-Será gerada em "C:\Users\Usuário" a pasta do projeto com o nome escolhido.
+Será gerado dentro do projeto uma pasta "node_modules" (ela ira armazenar todas as dependências externas, módulos e pacotes).
 
-### 3º Localizar pasta e selecioná-la:
-
-Através do VS Code, siga este caminho:
-
-Clique em Arquivo > Abrir Pasta > Vá no Disco C do Computador> Selecione a Pasta Usuários > Selecione a Pasta Usuário > Selecione a Pasta do Projeto.
-
-![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/21.png)
-
-### 4º Iniciar o projeto Node.js
-
-No terminal, dentro da pasta do projeto, digite o código abaixo e aperte enter:
+#### 6.3º Digite no terminal o seguinte código:
 
 ```bash
-
-npm init -y
-
+npm install mquery
 ```
+Logo após aperte "Enter"
 
-Será criado o package.json, que guarda os dados do projeto e dependências.
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/46.png)
 
-### 5º Instalar os pacotes
+Será gerado dentro dentro da pasta "node_modules" um arquivo de nome "mquery" (uma biblioteca JavaScript usada principalmente para criar e manipular consultas MongoDB).
 
-No terminal, digite o código abaixo e aperte enter:
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/47.png)
+
+#### 6.4º Para finalizar iremos digitar no terminal o seguinte código:
 
 ```bash
-
-npm install express mongoose dotenv cors
-
-npm install --save-dev nodemon
-
+node src/server.js
 ```
+Logo após aperte "Enter"
 
-Será criado:
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/48.png)
 
-- Express: framework web.
+O Código "node src/server.js" ira iniciar o servidor Node.js, executando o arquivo server.js que está dentro da pasta src.
 
-- Mongoose: conexão com MongoDB.
-
-- Dotenv: permite usar variáveis secretas no .env.
-
-- Cors: libera acesso à API de outros domínios.
-
-- Nodemon: reinicia o servidor automaticamente em modo de desenvolvimento.
-
- 
-
-```bash
-
-```
+![Imagem dos Testes](https://raw.githubusercontent.com/eduabjr/mongodb/main/imagens2/49.png)
 
 ## Roteiro de Testes da API de Tarefas em localhost
 
