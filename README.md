@@ -532,7 +532,7 @@ var tarefas = new Schema({
 
  ```
 
-## Instrução de Uso   
+# Instrução de Uso   
 
 #### 1° Baixe o repositório completo através do botão "Code" no formato zip e extraia seu conteúdo em sua máquina.
 
